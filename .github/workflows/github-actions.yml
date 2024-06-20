@@ -4,9 +4,10 @@ on:
         branches:
           - main
 
-BuildFramework:
-  runs-on: macOS-latest
-  steps:
+jobs:
+  BuildFramework:
+    runs-on: macOS-latest
+    steps:
     - uses: actions/checkout@v1
     - name: Build UnitTestSample
       run: ./build.sh
