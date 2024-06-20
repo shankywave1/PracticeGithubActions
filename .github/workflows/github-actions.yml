@@ -1,0 +1,13 @@
+name: learn-github-actions
+on: 
+   pull_request:
+        branches:
+          - main
+
+BuildFramework:
+  runs-on: macOS-latest
+  steps:
+    - uses: actions/checkout@v1
+    - name: Build UnitTestSample
+      run: ./build.sh
+
